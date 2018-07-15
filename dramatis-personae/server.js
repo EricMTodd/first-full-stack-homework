@@ -13,6 +13,7 @@ require("./db/db");
 // Required middleware
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride("_method"));
+app.use(express.static(__dirname + '/public'));
 
 
 // Establishing required connection to controllers
