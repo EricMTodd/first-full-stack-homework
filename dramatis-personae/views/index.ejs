@@ -6,20 +6,22 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel|Didact+Gothic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<title></title>
 </head>
 <body>
+	
 	<h1>Dramatis Personae Index Page</h1>
 
 	<a href="./new">Create New Dramatis Personae</a>
 
 	<% for (let i = 0; i < dramatisPersonaeList.length; i++) { %>
 		<h3><a href="<%= dramatisPersonaeList[i].id %>"><%=dramatisPersonaeList[i].name%></a></h3>
+		<a class="editButton" href="/dramatisPersonae/<%=dramatisPersonaeList[i].id%>/edit">Edit Details</a><br/><br/>
 		<form method="POST" action="/dramatisPersonae/<%=dramatisPersonaeList[i].id%>?_method=DELETE">
-		<button>Delete <%=dramatisPersonaeList[i].name%></button>	
+		<button class="deleteButton">Delete</button>	
 		</form>
-		<a href="/dramatisPersonae/<%=dramatisPersonaeList[i].id%>/edit">Edit</a>
 	<% } %>
 
 </body>

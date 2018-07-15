@@ -6,20 +6,23 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel|Didact+Gothic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
 	<title></title>
 </head>
 <body>
 	<h1>Dramatis Personae Edit Page</h1>
 
+	<a href="/dramatisPersonae/">Return to Index</a><br/>
+	<br/>
 	<form method="POST" action="/dramatisPersonae/<%=dramatisPersonae.id%>?_method=PUT">
-		Name: <input type="text" name="name" value="<%=dramatisPersonae.name%>">
-		Age: <input type="text" name="age" value="<%=dramatisPersonae.age%>">
-		Gender: <input type="text" name="gender" value="<%=dramatisPersonae.gender%>">
-		Race: <input type="text" name="race" value="<%=dramatisPersonae.race%>">
-		Class: <input type="text" name="class" value="<%=dramatisPersonae.class%>">
+		Name: <input type="text" name="name" value="<%=dramatisPersonae.name%>"><br/>
+		Age: <input type="text" name="age" value="<%=dramatisPersonae.age%>"><br/>
+		Gender: <input type="text" name="gender" value="<%=dramatisPersonae.gender%>"><br/>
+		Race: <input type="text" name="race" value="<%=dramatisPersonae.race%>"><br/>
+		Class: <input type="text" name="class" value="<%=dramatisPersonae.class%>"><br/>
 		<br/>
-		<input type="submit" name="">
+		<button type="submit" class="submitButton"><span>Submit </span>
 	</form>
 
 </body>
