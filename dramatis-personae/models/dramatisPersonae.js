@@ -13,5 +13,5 @@ const dramatisPersonaeSchema = new mongoose.Schema({
 	class: String,
 });
 
-module.exports = mongoose.model("DramatisPersonae", dramatisPersonaeSchema);
 
+module.exports = mongoose.model("DramatisPersonae", dramatisPersonaeSchema);
