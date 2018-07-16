@@ -42,9 +42,13 @@ router.post("/", (req, res) => {
 // Show Route
 router.get("/:id", (req, res) => {
 	DramatisPersonae.findById(req.params.id, (err, foundDramatisPersonae) => {
-		res.render("show.ejs", {
+		if (err) {
+			console.log(err, "Failed to display index.ejs.");
+		} else {
+			res.render("show.ejs", {
 		 	"dramatisPersonae": foundDramatisPersonae
-		})
+			})
+		}
 	});
 });
 
